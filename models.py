@@ -26,7 +26,7 @@ class Heart:
 
         
 class Snake:
-    MOVE_WAIT = 0.09
+    MOVE_WAIT = 0.05
     BLOCK_SIZE = 16
     def __init__(self,world,x,y):
         self.world = world
