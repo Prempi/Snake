@@ -55,7 +55,7 @@ class Snake:
             self.has_eaten = False
 
     def eat(self,Heart):
-        if(self.x == Heart.x and self.y == Heart.y):
+        if(math.fabs(self.x-Heart.x) <= 12 and math.fabs(self.y-Heart.y) <= 12):
             return True
     def eat_tail(self):
         for sbody in self.body[1:]:
@@ -73,7 +73,7 @@ class Snake:
         self.out_of_range()
         self.body.insert(0,(self.x,self.y))
         self.body.pop()
-       
+        
 
         if(self.eat_tail()):
             self.body.pop()
