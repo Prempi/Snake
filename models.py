@@ -56,7 +56,7 @@ class Snake:
             self.has_eaten = False
 
     def eat(self,Heart):
-        if(math.fabs(self.x-Heart.x) <= 12 and math.fabs(self.y-Heart.y) <= 12):
+        if(self.x == Heart.x and self.y == Heart.y):
             return True
     def eat_tail(self):
         for sbody in self.body[1:]:
