@@ -37,6 +37,7 @@ class Snake:
         self.body = [(x,y),(x-Snake.BLOCK_SIZE, y),(x-2*Snake.BLOCK_SIZE, y)]
         self.has_eaten = False
         self.length = 3
+        self.gg = 0
 
     def out_of_range(self):
         if self.x > self.world.width:
@@ -60,7 +61,6 @@ class Snake:
     def eat_tail(self):
         for sbody in self.body[1:]:
             if sbody == self.body[0]:
-                self.length -= 1
                 return True
 
     def update(self,delta):
@@ -76,8 +76,8 @@ class Snake:
         
 
         if(self.eat_tail()):
-            self.body.pop()
-            print(self.length)
+            self.gg = 1
+            #print(self.length)
        
         self.wait_time = 0
 
