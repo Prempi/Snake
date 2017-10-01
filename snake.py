@@ -1,7 +1,7 @@
 import arcade
 from models import World
-SCREEN_WIDTH = 600
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 640
+SCREEN_HEIGHT = 640
 
 class ModelSprite(arcade.Sprite):
     def __init__(self, *args, **kwargs):
